@@ -190,6 +190,21 @@
         .dl-req ul{display:flex;flex-direction:column;gap:6px}
         .dl-req li{color:rgba(255,255,255,.45);font-size:.82rem;display:flex;align-items:center;gap:6px}
         .dl-req li::before{content:'\2713';color:#00b894;font-weight:700;font-size:.75rem}
+        .dl-platforms{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;width:100%}
+        .dl-plat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 16px;text-align:center;flex:1;min-width:130px;max-width:190px}
+        .dl-plat .dpi{font-size:2rem;margin-bottom:6px}
+        .dl-plat h4{color:#fff;font-size:.92rem;font-weight:700;margin-bottom:6px}
+        .dl-plat .dp-badge{display:inline-block;font-size:.66rem;padding:2px 8px;border-radius:12px;margin-bottom:10px;font-weight:600}
+        .dl-plat .dp-badge-new{background:rgba(0,184,148,.2);color:#00b894;border:1px solid rgba(0,184,148,.3)}
+        .dl-plat .dp-badge-soon{background:rgba(253,203,110,.15);color:#fdcb6e;border:1px solid rgba(253,203,110,.25)}
+        .dpb{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;padding:9px 10px;border-radius:30px;font-weight:700;font-size:.8rem;text-decoration:none;transition:.2s;margin-top:6px;border:none;cursor:pointer}
+        .dpb-win{background:linear-gradient(135deg,#0078d4,#106ebe);color:#fff}
+        .dpb-win:hover{box-shadow:0 4px 14px rgba(0,120,212,.4)}
+        .dpb-mac{background:rgba(255,255,255,.08);color:rgba(255,255,255,.35);pointer-events:none}
+        .dpb-apk{background:linear-gradient(135deg,#00b894,#00cec9);color:#fff}
+        .dpb-apk:hover{box-shadow:0 4px 14px rgba(0,206,201,.35)}
+        .dpb-sec{background:rgba(255,255,255,.07);color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.1);font-size:.74rem}
+        .dpb-sec:hover{background:rgba(255,255,255,.12)}
 
         /* CTA */
         .cta{background:linear-gradient(135deg,#2980b9,#1a5276);text-align:center;padding:70px 0}
@@ -349,25 +364,29 @@
                 </div>
             </div>
             <div class="dl-visual">
-                <div class="dl-box">
-                    <div class="dl-icon">&#128229;</div>
-                    <h3 data-el="AI Health Suite v1.0" data-en="AI Health Suite v1.0">AI Health Suite v1.0</h3>
-                    <p data-el="Έκδοση πλήρους εγκατάστασης" data-en="Full installation version">Έκδοση πλήρους εγκατάστασης</p>
-                    <a href="https://github.com/kouskourasd-creator/ai-health-suite-/releases/download/healthcare/AI.Health.Suite.Setup.1.0.0.exe" class="btn btn-dl" style="width:100%;justify-content:center" data-el="&#128229; Λήψη Setup.exe" data-en="&#128229; Download Setup.exe">&#128229; Λήψη Setup.exe</a>
-                    <div class="dl-meta">
-                        <span>&#128196; ~80 MB</span>
-                        <span>&#128187; Windows 10/11</span>
-                        <span>&#128274; SHA256</span>
+                <div class="dl-platforms">
+                    <!-- Windows -->
+                    <div class="dl-plat">
+                        <div class="dpi">&#128379;</div>
+                        <h4>Windows</h4>
+                        <div class="dp-badge dp-badge-new">10/11 &middot; x64</div>
+                        <a class="dpb dpb-win" href="https://github.com/kouskourasd-creator/ai-health-suite-/releases/download/healthcare/AI.Health.Suite.Setup.1.0.0.exe" data-el="&#8659; Installer" data-en="&#8659; Installer">&#8659; Installer</a>
+                        <a class="dpb dpb-sec" href="https://github.com/kouskourasd-creator/ai-health-suite-/releases/download/healthcare/AI.Health.Suite.1.0.0.exe" data-el="&#128230; Portable" data-en="&#128230; Portable">&#128230; Portable</a>
                     </div>
-                </div>
-                <div class="dl-req">
-                    <h4 data-el="Απαιτήσεις Συστήματος" data-en="System Requirements">Απαιτήσεις Συστήματος</h4>
-                    <ul>
-                        <li data-el="Windows 10 / 11 (32-bit ή 64-bit)" data-en="Windows 10 / 11 (32-bit or 64-bit)">Windows 10 / 11 (32-bit ή 64-bit)</li>
-                        <li data-el="Microsoft Access Database Engine 2010" data-en="Microsoft Access Database Engine 2010">Microsoft Access Database Engine 2010</li>
-                        <li data-el="Ελάχιστος χώρος: 200 MB" data-en="Minimum space: 200 MB">Ελάχιστος χώρος: 200 MB</li>
-                        <li data-el="Ανάλυση οθόνης: 1280x720+" data-en="Screen resolution: 1280x720+">Ανάλυση οθόνης: 1280x720+</li>
-                    </ul>
+                    <!-- macOS -->
+                    <div class="dl-plat">
+                        <div class="dpi">&#63743;</div>
+                        <h4>macOS</h4>
+                        <div class="dp-badge dp-badge-soon" data-el="Σύντομα" data-en="Coming Soon">Σύντομα</div>
+                        <span class="dpb dpb-mac" data-el="&#128260; Σε κατασκευή" data-en="&#128260; Building...">&#128260; Σε κατασκευή</span>
+                    </div>
+                    <!-- Android -->
+                    <div class="dl-plat">
+                        <div class="dpi">&#129302;</div>
+                        <h4>Android</h4>
+                        <div class="dp-badge dp-badge-new">Android 7+</div>
+                        <a class="dpb dpb-apk" href="https://github.com/kouskourasd-creator/ai-health-suite-/releases/download/healthcare/app-release.apk" data-el="&#8659; APK" data-en="&#8659; APK">&#8659; APK</a>
+                    </div>
                 </div>
             </div>
         </div>
