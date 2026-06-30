@@ -133,8 +133,10 @@ exports.handler = async function (event, context) {
 
   // Verify with Gumroad
   const gumroad = await verifyGumroadLicense(gumroadKey, productId);
+  console.log("[activate] Gumroad response:", JSON.stringify(gumroad));
 
   if (!gumroad.success) {
+    console.log("[activate] Gumroad fail - product_id used:", productId, "message:", gumroad.message);
     return {
       statusCode: 400,
       headers,
