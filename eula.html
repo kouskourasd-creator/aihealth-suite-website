@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Άδεια Χρήσης — AI Health Suite</title>
+    <title>License Agreement — AI Health Suite</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
@@ -20,6 +20,9 @@
         .nav-links{display:flex;gap:24px;align-items:center}
         .nav-links a{color:#555;font-size:.88rem;font-weight:500}
         .nav-links a:hover{color:#2980b9}
+        .lang{display:flex;background:#f0f0f0;border-radius:20px;overflow:hidden}
+        .lang button{border:none;background:none;padding:5px 12px;font-size:.78rem;font-weight:600;cursor:pointer;color:#999;transition:.2s}
+        .lang button.on{background:#2980b9;color:#fff;border-radius:20px}
 
         /* CONTENT */
         .eula-header{text-align:center;padding:60px 0 40px}
@@ -50,11 +53,15 @@
     <div class="container nav-inner">
         <a href="index.html" class="logo">AI <b>Health</b> Suite</a>
         <div class="nav-links">
-            <a href="index.html">Αρχική</a>
-            <a href="index.html#programs">Προγράμματα</a>
-            <a href="quote.html">Ζητήστε Προσφορά</a>
-            <a href="eula.html">Άδεια Χρήσης</a>
-            <a href="mailto:kouskourasd@gmail.com">Επικοινωνία</a>
+            <a href="index.html" data-el="Αρχική" data-en="Home">Home</a>
+            <a href="index.html#programs" data-el="Προγράμματα" data-en="Programs">Programs</a>
+            <a href="quote.html" data-el="Ζητήστε Προσφορά" data-en="Request Quote">Request Quote</a>
+            <a href="eula.html" data-el="Άδεια Χρήσης" data-en="License">License</a>
+            <a href="mailto:kouskourasd@gmail.com" data-el="Επικοινωνία" data-en="Contact">Contact</a>
+            <div class="lang">
+                <button onclick="setLang('el')">EL</button>
+                <button class="on" onclick="setLang('en')">EN</button>
+            </div>
         </div>
     </div>
 </nav>
@@ -62,111 +69,111 @@
 <!-- HEADER -->
 <section class="eula-header">
     <div class="container">
-        <h1>Άδεια Χρήσης (EULA)</h1>
-        <p>Τελευταία ενημέρωση: 20 Μαΐου 2026</p>
+        <h1 data-el="Άδεια Χρήσης (EULA)" data-en="License Agreement (EULA)">License Agreement (EULA)</h1>
+        <p data-el="Τελευταία ενημέρωση: 20 Μαΐου 2026" data-en="Last updated: May 20, 2026">Last updated: May 20, 2026</p>
     </div>
 </section>
 
 <!-- CONTENT -->
 <section class="container eula-body">
 
-    <h2>1. Γενικές Πληροφορίες</h2>
-    <p>Η παρούσα Άδεια Χρήσης («Άδεια») αποτελεί νομική συμφωνία μεταξύ εσάς («Χρήστης») και του Δημήτριου Κουσκούρα («Δικαιούχος»), ιδιοκτήτη και δημιουργού του λογισμικού AI Health Suite.</p>
-    <p>Με την εγκατάσταση ή χρήση του AI Health Suite, αποδέχεστε πλήρως τους όρους της παρούσας Άδειας. Αν δεν συμφωνείτε, μην χρησιμοποιήσετε το λογισμικό.</p>
+    <h2 data-el="1. Γενικές Πληροφορίες" data-en="1. General Information">1. General Information</h2>
+    <p data-el="Η παρούσα Άδεια Χρήσης («Άδεια») αποτελεί νομική συμφωνία μεταξύ εσάς («Χρήστης») και του Δημήτριου Κουσκούρα («Δικαιούχος»), ιδιοκτήτη και δημιουργού του λογισμικού AI Health Suite." data-en="This End User License Agreement (&ldquo;Agreement&rdquo;) is a legal agreement between you (&ldquo;User&rdquo;) and Dimitrios Kouskouras (&ldquo;Licensor&rdquo;), owner and creator of the AI Health Suite software.">This End User License Agreement (&ldquo;Agreement&rdquo;) is a legal agreement between you (&ldquo;User&rdquo;) and Dimitrios Kouskouras (&ldquo;Licensor&rdquo;), owner and creator of the AI Health Suite software.</p>
+    <p data-el="Με την εγκατάσταση ή χρήση του AI Health Suite, αποδέχεστε πλήρως τους όρους της παρούσας Άδειας. Αν δεν συμφωνείτε, μην χρησιμοποιήσετε το λογισμικό." data-en="By installing or using AI Health Suite, you fully accept the terms of this Agreement. If you do not agree, do not use the software.">By installing or using AI Health Suite, you fully accept the terms of this Agreement. If you do not agree, do not use the software.</p>
 
-    <h2>2. Περιγραφή Λογισμικού</h2>
-    <p>Το AI Health Suite αποτελείται από 18 εξειδικευμένα προγράμματα διαχείρισης ιατρικών πρακτικών, τα οποία περιλαμβάνουν:</p>
+    <h2 data-el="2. Περιγραφή Λογισμικού" data-en="2. Software Description">2. Software Description</h2>
+    <p data-el="Το AI Health Suite αποτελείται από 18 εξειδικευμένα προγράμματα διαχείρισης ιατρικών πρακτικών, τα οποία περιλαμβάνουν:" data-en="AI Health Suite consists of 18 specialized medical practice management programs, including:">AI Health Suite consists of 18 specialized medical practice management programs, including:</p>
     <ul>
-        <li>ICARDIO — Παθολογία Καρδιάς (Interventional Cardiology)</li>
-        <li>AIeye / IEYE — Οφθαλμολογία</li>
-        <li>IChild — Παιδιατρική</li>
-        <li>IHEMA — Αιματολογία</li>
-        <li>INEPHRO — Νεφρολογία</li>
-        <li>IRHEUM — Ρευματολογία</li>
-        <li>IENDO — Ενδοκρινολογία</li>
-        <li>IPHYSIO — Φυσικοθεραπεία</li>
-        <li>IGASTRO — Γαστρεντερολογία</li>
-        <li>IPULMO — Πνευμονολογία</li>
-        <li>INEURO — Νευρολογία</li>
-        <li>IDERM — Δερματολογία</li>
-        <li>IPSYCH — Ψυχιατρική</li>
-        <li>IORTHOP — Ορθοπεδική</li>
-        <li>IURO — Ουρολογία</li>
-        <li>IENT — Ωτορινολαρυγγολογία</li>
-        <li>IGYN — Μαιευτική-Γυναικολογία</li>
-        <li>IGENERAL — Γενική Ιατρική</li>
+        <li data-el="ICARDIO — Παθολογία Καρδιάς (Interventional Cardiology)" data-en="ICARDIO — Interventional Cardiology">ICARDIO — Interventional Cardiology</li>
+        <li data-el="AIeye / IEYE — Οφθαλμολογία" data-en="AIeye / IEYE — Ophthalmology">AIeye / IEYE — Ophthalmology</li>
+        <li data-el="IChild — Παιδιατρική" data-en="IChild — Pediatrics">IChild — Pediatrics</li>
+        <li data-el="IHEMA — Αιματολογία" data-en="IHEMA — Hematology">IHEMA — Hematology</li>
+        <li data-el="INEPHRO — Νεφρολογία" data-en="INEPHRO — Nephrology">INEPHRO — Nephrology</li>
+        <li data-el="IRHEUM — Ρευματολογία" data-en="IRHEUM — Rheumatology">IRHEUM — Rheumatology</li>
+        <li data-el="IENDO — Ενδοκρινολογία" data-en="IENDO — Endocrinology">IENDO — Endocrinology</li>
+        <li data-el="IPHYSIO — Φυσικοθεραπεία" data-en="IPHYSIO — Physiotherapy">IPHYSIO — Physiotherapy</li>
+        <li data-el="IGASTRO — Γαστρεντερολογία" data-en="IGASTRO — Gastroenterology">IGASTRO — Gastroenterology</li>
+        <li data-el="IPULMO — Πνευμονολογία" data-en="IPULMO — Pulmonology">IPULMO — Pulmonology</li>
+        <li data-el="INEURO — Νευρολογία" data-en="INEURO — Neurology">INEURO — Neurology</li>
+        <li data-el="IDERM — Δερματολογία" data-en="IDERM — Dermatology">IDERM — Dermatology</li>
+        <li data-el="IPSYCH — Ψυχιατρική" data-en="IPSYCH — Psychiatry">IPSYCH — Psychiatry</li>
+        <li data-el="IORTHOP — Ορθοπεδική" data-en="IORTHOP — Orthopedics">IORTHOP — Orthopedics</li>
+        <li data-el="IURO — Ουρολογία" data-en="IURO — Urology">IURO — Urology</li>
+        <li data-el="IENT — Ωτορινολαρυγγολογία" data-en="IENT — ENT (Ear, Nose & Throat)">IENT — ENT (Ear, Nose &amp; Throat)</li>
+        <li data-el="IGYN — Μαιευτική-Γυναικολογία" data-en="IGYN — OB/GYN">IGYN — OB/GYN</li>
+        <li data-el="IGENERAL — Γενική Ιατρική" data-en="IGENERAL — General Practice">IGENERAL — General Practice</li>
     </ul>
-    <p>Κάθε πρόγραμμα περιλαμβάνει AI Agent v2.0, υποστήριξη δικτύου, email integration, ICD-10 κωδικούς, PDF export και εκτύπωση.</p>
+    <p data-el="Κάθε πρόγραμμα περιλαμβάνει AI Agent v2.0, υποστήριξη δικτύου, email integration, ICD-10 κωδικούς, PDF export και εκτύπωση." data-en="Each program includes AI Agent v2.0, network support, email integration, ICD-10 codes, PDF export and printing.">Each program includes AI Agent v2.0, network support, email integration, ICD-10 codes, PDF export and printing.</p>
 
-    <h2>3. Τύποι Αδειών</h2>
+    <h2 data-el="3. Τύποι Αδειών" data-en="3. License Types">3. License Types</h2>
 
-    <h3>3.1 Δωρεάν Δοκιμασία (Trial)</h3>
-    <p>Παρέχεται 30 ημερών δωρεάν δοκιμασία με πλήρη λειτουργικότητα. Δεν απαιτείται πιστωτική κάρτα. Μετά τη λήξη της δοκιμασίας, τα προγράμματα κλειδώνουν μέχρι την ενεργοποίηση συνδρομής.</p>
+    <h3 data-el="3.1 Δωρεάν Δοκιμασία (Trial)" data-en="3.1 Free Trial">3.1 Free Trial</h3>
+    <p data-el="Παρέχεται 30 ημερών δωρεάν δοκιμασία με πλήρη λειτουργικότητα. Δεν απαιτείται πιστωτική κάρτα. Μετά τη λήξη της δοκιμασίας, τα προγράμματα κλειδώνουν μέχρι την ενεργοποίηση συνδρομής." data-en="A 30-day free trial with full functionality is provided. No credit card required. After the trial expires, programs are locked until a subscription is activated.">A 30-day free trial with full functionality is provided. No credit card required. After the trial expires, programs are locked until a subscription is activated.</p>
 
-    <h3>3.2 Μηνιαία Συνδρομή</h3>
-    <p>Μηνιαία χρέωση με αυτόματη ανανέωση. Μπορείτε να ακυρώσετε ανά πάσα στιγμή — η συνδρομή ισχύει μέχρι το τέλος της πληρωμένης περιόδου.</p>
+    <h3 data-el="3.2 Μηνιαία Συνδρομή" data-en="3.2 Monthly Subscription">3.2 Monthly Subscription</h3>
+    <p data-el="Μηνιαία χρέωση με αυτόματη ανανέωση. Μπορείτε να ακυρώσετε ανά πάσα στιγμή — η συνδρομή ισχύει μέχρι το τέλος της πληρωμένης περιόδου." data-en="Monthly billing with automatic renewal. You may cancel at any time — the subscription remains active until the end of the paid period.">Monthly billing with automatic renewal. You may cancel at any time — the subscription remains active until the end of the paid period.</p>
 
-    <h3>3.3 Ετήσια Συνδρομή</h3>
-    <p>Ετήσια χρέωση με έκπτωση ~17% σε σχέση με τη μηνιαία. Αυτόματη ανανέωση εκτός αν ακυρωθεί.</p>
+    <h3 data-el="3.3 Ετήσια Συνδρομή" data-en="3.3 Annual Subscription">3.3 Annual Subscription</h3>
+    <p data-el="Ετήσια χρέωση με έκπτωση ~17% σε σχέση με τη μηνιαία. Αυτόματη ανανέωση εκτός αν ακυρωθεί." data-en="Annual billing with ~17% discount compared to monthly. Automatic renewal unless cancelled.">Annual billing with ~17% discount compared to monthly. Automatic renewal unless cancelled.</p>
 
-    <h3>3.4 Μόνιμη Άδεια (Εφάπαξ)</h3>
-    <p>Μόνιμη άδεια χρήσης — τα προγράμματα λειτουργούν για πάντα χωρίς επαναλαμβανόμενη χρέωση. Η τιμή καθορίζεται κατ' αντικείμενο.</p>
+    <h3 data-el="3.4 Μόνιμη Άδεια (Εφάπαξ)" data-en="3.4 Perpetual License (One-time)">3.4 Perpetual License (One-time)</h3>
+    <p data-el="Μόνιμη άδεια χρήσης — τα προγράμματα λειτουργούν για πάντα χωρίς επαναλαμβανόμενη χρέωση. Η τιμή καθορίζεται κατ' αντικείμενο." data-en="Permanent license — programs work indefinitely with no recurring charge. Pricing is determined per project.">Permanent license — programs work indefinitely with no recurring charge. Pricing is determined per project.</p>
 
     <div class="highlight">
-        <p><strong>Σημαντικό:</strong> Όλες οι άδειες περιλαμβάνουν όλα τα 18 προγράμματα. Δεν πωλούνται μεμονωμένα προγράμματα.</p>
+        <p data-el="<strong>Σημαντικό:</strong> Όλες οι άδειες περιλαμβάνουν όλα τα 18 προγράμματα. Δεν πωλούνται μεμονωμένα προγράμματα." data-en="<strong>Important:</strong> All licenses include all 18 programs. Individual programs are not sold separately."><strong>Important:</strong> All licenses include all 18 programs. Individual programs are not sold separately.</p>
     </div>
 
-    <h2>4. Άδεια Χρήσης</h2>
-    <p>Σας χορηγείται μη αποκλειστική, μεταβιβάσιμη άδεια χρήσης του λογισμικού σύμφωνα με τον τύπο άδειας που έχετε επιλέξει. Η άδεια επιτρέπει:</p>
+    <h2 data-el="4. Άδεια Χρήσης" data-en="4. Grant of License">4. Grant of License</h2>
+    <p data-el="Σας χορηγείται μη αποκλειστική, μεταβιβάσιμη άδεια χρήσης του λογισμικού σύμφωνα με τον τύπο άδειας που έχετε επιλέξει. Η άδεια επιτρέπει:" data-en="You are granted a non-exclusive, transferable license to use the software according to the license type you have selected. The license permits:">You are granted a non-exclusive, transferable license to use the software according to the license type you have selected. The license permits:</p>
     <ul>
-        <li>Εγκατάσταση και χρήση σε έναν ή περισσότερους υπολογιστές εντός του ίδιου ιατρείου/κλινικής</li>
-        <li>Απεριόριστους ταυτόχρονους χρήστες στο ίδιο δίκτυο (LAN)</li>
-        <li>Χρήση και των 18 προγραμμάτων ειδικοτήτων</li>
-        <li>Εξαγωγή δεδομένων σε PDF και εκτύπωση</li>
+        <li data-el="Εγκατάσταση και χρήση σε έναν ή περισσότερους υπολογιστές εντός του ίδιου ιατρείου/κλινικής" data-en="Installation and use on one or more computers within the same practice/clinic">Installation and use on one or more computers within the same practice/clinic</li>
+        <li data-el="Απεριόριστους ταυτόχρονους χρήστες στο ίδιο δίκτυο (LAN)" data-en="Unlimited concurrent users on the same network (LAN)">Unlimited concurrent users on the same network (LAN)</li>
+        <li data-el="Χρήση και των 18 προγραμμάτων ειδικοτήτων" data-en="Use of all 18 specialty programs">Use of all 18 specialty programs</li>
+        <li data-el="Εξαγωγή δεδομένων σε PDF και εκτύπωση" data-en="Data export to PDF and printing">Data export to PDF and printing</li>
     </ul>
 
-    <h2>5. Περιορισμοί</h2>
-    <p>Δεν επιτρέπεται:</p>
+    <h2 data-el="5. Περιορισμοί" data-en="5. Restrictions">5. Restrictions</h2>
+    <p data-el="Δεν επιτρέπεται:" data-en="You may not:">You may not:</p>
     <ul>
-        <li>Αντιγραφή, τροποποίηση ή αντίστροφη μηχανική (reverse engineering) του λογισμικού</li>
-        <li>Μίσθωση, εκμίσθωση ή μεταπώληση της άδειας χωρίς γραπτή συγκατάθεση</li>
-        <li>Χρήση του λογισμικού για σκοπούς που παραβιάζουν τη νομοθεσία προστασίας δεδομένων (GDPR)</li>
-        <li>Αφαίρεση ή αλλαγή στοιχείων copyright ή δικαιωμάτων πνευματικής ιδιοκτησίας</li>
+        <li data-el="Αντιγραφή, τροποποίηση ή αντίστροφη μηχανική (reverse engineering) του λογισμικού" data-en="Copy, modify or reverse engineer the software">Copy, modify or reverse engineer the software</li>
+        <li data-el="Μίσθωση, εκμίσθωση ή μεταπώληση της άδειας χωρίς γραπτή συγκατάθεση" data-en="Rent, lease or resell the license without written consent">Rent, lease or resell the license without written consent</li>
+        <li data-el="Χρήση του λογισμικού για σκοπούς που παραβιάζουν τη νομοθεσία προστασίας δεδομένων (GDPR)" data-en="Use the software for purposes that violate data protection legislation (GDPR)">Use the software for purposes that violate data protection legislation (GDPR)</li>
+        <li data-el="Αφαίρεση ή αλλαγή στοιχείων copyright ή δικαιωμάτων πνευματικής ιδιοκτησίας" data-en="Remove or alter any copyright or intellectual property notices">Remove or alter any copyright or intellectual property notices</li>
     </ul>
 
-    <h2>6. Δεδομένα & Απόρρητο</h2>
-    <p>Τα δεδομένα ασθενών αποθηκεύονται <strong>τοπικά</strong> στον υπολογιστή σας σε βάση δεδομένων Microsoft Access (.mdb). Δεν στέλνονται σε εξωτερικούς διακομιστές ή cloud υπηρεσίες.</p>
+    <h2 data-el="6. Δεδομένα & Απόρρητο" data-en="6. Data &amp; Privacy">6. Data &amp; Privacy</h2>
+    <p data-el="Τα δεδομένα ασθενών αποθηκεύονται <strong>τοπικά</strong> στον υπολογιστή σας σε βάση δεδομένων Microsoft Access (.mdb). Δεν στέλνονται σε εξωτερικούς διακομιστές ή cloud υπηρεσίες." data-en="Patient data is stored <strong>locally</strong> on your computer. It is not transmitted to external servers or cloud services.">Patient data is stored <strong>locally</strong> on your computer. It is not transmitted to external servers or cloud services.</p>
     <ul>
-        <li>Τα δεδομένα παραμένουν στον υπολογιστή σας ακόμα και αν ακυρώσετε τη συνδρομή</li>
-        <li>Μπορείτε να εξάγετε τα δεδομένα σας ανά πάσα στιγμή</li>
-        <li>Για χρήση δικτύου, η βάση μοιράζεται μόνο μέσα στο ίδιο LAN</li>
-        <li>Η υποχρέωση συμμόρφωσης με GDPR αφορά τον Χρήστη ως υπεύθυνο επεξεργασίας</li>
+        <li data-el="Τα δεδομένα παραμένουν στον υπολογιστή σας ακόμα και αν ακυρώσετε τη συνδρομή" data-en="Your data remains on your computer even if you cancel your subscription">Your data remains on your computer even if you cancel your subscription</li>
+        <li data-el="Μπορείτε να εξάγετε τα δεδομένα σας ανά πάσα στιγμή" data-en="You can export your data at any time">You can export your data at any time</li>
+        <li data-el="Για χρήση δικτύου, η βάση μοιράζεται μόνο μέσα στο ίδιο LAN" data-en="For network use, the database is shared only within the same LAN">For network use, the database is shared only within the same LAN</li>
+        <li data-el="Η υποχρέωση συμμόρφωσης με GDPR αφορά τον Χρήστη ως υπεύθυνο επεξεργασίας" data-en="GDPR compliance obligations apply to the User as data controller">GDPR compliance obligations apply to the User as data controller</li>
     </ul>
 
-    <h2>7. Πνευματική Ιδιοκτησία</h2>
-    <p>Το λογισμικό AI Health Suite και ο πηγαίος κώδικας αποτελούν πνευματική ιδιοκτησία του Δημητρίου Κουσκούρα. Όλα τα δικαιώματα διατηρούνται.</p>
-    <p>Ο πηγαίος κώδικας (source code) παρέχεται μόνο στο πακέτο Enterprise (read-only πρόσβαση).</p>
+    <h2 data-el="7. Πνευματική Ιδιοκτησία" data-en="7. Intellectual Property">7. Intellectual Property</h2>
+    <p data-el="Το λογισμικό AI Health Suite και ο πηγαίος κώδικας αποτελούν πνευματική ιδιοκτησία του Δημητρίου Κουσκούρα. Όλα τα δικαιώματα διατηρούνται." data-en="The AI Health Suite software and source code are the intellectual property of Dimitrios Kouskouras. All rights reserved.">The AI Health Suite software and source code are the intellectual property of Dimitrios Kouskouras. All rights reserved.</p>
+    <p data-el="Ο πηγαίος κώδικας (source code) παρέχεται μόνο στο πακέτο Enterprise (read-only πρόσβαση)." data-en="Source code is provided only in the Enterprise package (read-only access).">Source code is provided only in the Enterprise package (read-only access).</p>
 
-    <h2>8. Εγγύηση & Ευθύνη</h2>
-    <p>Το λογισμικό παρέχεται «ως έχει». Ο Δικαιούχος δεν εγγυάται ότι το λογισμικό θα λειτουργεί χωρίς σφάλματα ή διακοπές. Η ευθύνη του Δικαιούχου περιορίζεται στο ποσό της συνδρομής που έχετε καταβάλει.</p>
-    <p>Ο Δικαιούχος δεν φέρει ευθύνη για:</p>
+    <h2 data-el="8. Εγγύηση & Ευθύνη" data-en="8. Warranty &amp; Liability">8. Warranty &amp; Liability</h2>
+    <p data-el="Το λογισμικό παρέχεται «ως έχει». Ο Δικαιούχος δεν εγγυάται ότι το λογισμικό θα λειτουργεί χωρίς σφάλματα ή διακοπές. Η ευθύνη του Δικαιούχου περιορίζεται στο ποσό της συνδρομής που έχετε καταβάλει." data-en='The software is provided "as is". The Licensor does not warrant that the software will operate without errors or interruptions. The Licensor&apos;s liability is limited to the subscription amount you have paid.'>The software is provided &ldquo;as is&rdquo;. The Licensor does not warrant that the software will operate without errors or interruptions. The Licensor&rsquo;s liability is limited to the subscription amount you have paid.</p>
+    <p data-el="Ο Δικαιούχος δεν φέρει ευθύνη για:" data-en="The Licensor is not liable for:">The Licensor is not liable for:</p>
     <ul>
-        <li>Απώλεια δεδομένων λόγω σφαλμάτων χρήσης ή βλαβών υλικού</li>
-        <li>Λανθασμένη ιατρική διάγνωση ή απόφαση βασισμένη στο λογισμικό</li>
-        <li>Ζημίες που προκύπτουν από μη εξουσιοδοτημένη πρόσβαση στη βάση δεδομένων</li>
+        <li data-el="Απώλεια δεδομένων λόγω σφαλμάτων χρήσης ή βλαβών υλικού" data-en="Data loss due to user error or hardware failure">Data loss due to user error or hardware failure</li>
+        <li data-el="Λανθασμένη ιατρική διάγνωση ή απόφαση βασισμένη στο λογισμικό" data-en="Incorrect medical diagnosis or decision based on the software">Incorrect medical diagnosis or decision based on the software</li>
+        <li data-el="Ζημίες που προκύπτουν από μη εξουσιοδοτημένη πρόσβαση στη βάση δεδομένων" data-en="Damages arising from unauthorized access to the database">Damages arising from unauthorized access to the database</li>
     </ul>
 
-    <h2>9. Τροποποιήσεις</h2>
-    <p>Ο Δικαιούχος διατηρεί το δικαίωμα να τροποποιεί τους όρους της παρούσας Άδειας. Οι αλλαγές θα γνωστοποιούνται μέσω email ή μέσω του λογισμικού. Η συνέχιση χρήσης μετά την ειδοποίηση συνεπάγεται αποδοχή των νέων όρων.</p>
+    <h2 data-el="9. Τροποποιήσεις" data-en="9. Amendments">9. Amendments</h2>
+    <p data-el="Ο Δικαιούχος διατηρεί το δικαίωμα να τροποποιεί τους όρους της παρούσας Άδειας. Οι αλλαγές θα γνωστοποιούνται μέσω email ή μέσω του λογισμικού. Η συνέχιση χρήσης μετά την ειδοποίηση συνεπάγεται αποδοχή των νέων όρων." data-en="The Licensor reserves the right to modify the terms of this Agreement. Changes will be communicated via email or through the software. Continued use after notification constitutes acceptance of the new terms.">The Licensor reserves the right to modify the terms of this Agreement. Changes will be communicated via email or through the software. Continued use after notification constitutes acceptance of the new terms.</p>
 
-    <h2>10. Επικοινωνία</h2>
-    <p>Για οποιαδήποτε απορία σχετικά με την Άδεια Χρήσης:</p>
+    <h2 data-el="10. Επικοινωνία" data-en="10. Contact">10. Contact</h2>
+    <p data-el="Για οποιαδήποτε απορία σχετικά με την Άδεια Χρήσης:" data-en="For any questions regarding this License Agreement:">For any questions regarding this License Agreement:</p>
     <ul>
         <li>Email: <a href="mailto:kouskourasd@gmail.com">kouskourasd@gmail.com</a></li>
-        <li>Δημήτριος Κουσκούρας — Δημιουργός AI Health Suite</li>
+        <li data-el="Δημήτριος Κουσκούρας — Δημιουργός AI Health Suite" data-en="Dimitrios Kouskouras — Creator of AI Health Suite">Dimitrios Kouskouras — Creator of AI Health Suite</li>
     </ul>
 
-    <p class="last-updated">Τελευταία ενημέρωση: 20 Μαΐου 2026 — Έκδοση 1.0</p>
+    <p class="last-updated" data-el="Τελευταία ενημέρωση: 20 Μαΐου 2026 — Έκδοση 1.0" data-en="Last updated: May 20, 2026 — Version 1.0">Last updated: May 20, 2026 — Version 1.0</p>
 
 </section>
 
@@ -175,5 +182,23 @@
     <div class="container">&copy; 2026 AI Health Suite — Dimitrios Kouskouras. All rights reserved.</div>
 </footer>
 
+<script>
+let L = localStorage.getItem('lang') || 'en';
+function setLang(l) {
+    L = l;
+    localStorage.setItem('lang', l);
+    document.querySelectorAll('.lang button').forEach(b => b.classList.remove('on'));
+    document.querySelector(`.lang button[onclick="setLang('${l}')"]`).classList.add('on');
+    document.documentElement.lang = l === 'el' ? 'el' : 'en';
+    document.querySelectorAll('[data-el]').forEach(e => {
+        const val = e.getAttribute('data-' + l);
+        if (val) e.innerHTML = val;
+    });
+    document.title = l === 'el'
+        ? 'Άδεια Χρήσης — AI Health Suite'
+        : 'License Agreement — AI Health Suite';
+}
+setLang(L);
+</script>
 </body>
 </html>
