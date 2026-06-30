@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activate License — AI Health Suite</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, Arial, sans-serif; background: #f8fafc; color: #1e293b; min-height: 100vh; }
+
+    /* Nav */
+    nav { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    nav a.logo { text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #0ea5e9; }
+    nav a.logo span { color: #1e293b; }
+    .lang { display: flex; gap: 4px; }
+    .lang button { border: 1px solid #e2e8f0; background: #fff; border-radius: 6px; padding: 4px 12px; cursor: pointer; font-size: 0.85rem; color: #64748b; }
+    .lang button.on { background: #0ea5e9; border-color: #0ea5e9; color: #fff; font-weight: 600; }
+
+    /* Layout */
+    main { max-width: 600px; margin: 48px auto; padding: 0 20px 64px; }
+    h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; }
+    .subtitle { color: #64748b; margin-bottom: 32px; }
+
+    /* Steps box */
+    .steps { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; }
+    .steps h3 { font-size: 0.95rem; font-weight: 600; color: #1d4ed8; margin-bottom: 10px; }
+    .steps ol { padding-left: 20px; color: #1e40af; font-size: 0.9rem; line-height: 1.8; }
+
+    /* Card */
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; margin-top: 20px; }
+    label:first-of-type { margin-top: 0; }
+    input { width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; font-family: monospace; color: #1e293b; outline: none; transition: border-color .2s; }
+    input:focus { border-color: #0ea5e9; box-shadow: 0 0 0 3px rgba(14,165,233,.15); }
+    .hint { font-size: 0.8rem; color: #94a3b8; margin-top: 4px; }
+    button[type="submit"] { margin-top: 24px; width: 100%; background: #0ea5e9; color: #fff; border: none; border-radius: 8px; padding: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .2s; }
+    button[type="submit"]:hover { background: #0284c7; }
+    button[type="submit"]:disabled { background: #94a3b8; cursor: not-allowed; }
+
+    /* Spinner */
+    #spinner { display: none; text-align: center; margin-top: 24px; color: #0ea5e9; font-size: 0.9rem; }
+    .spin { display: inline-block; width: 20px; height: 20px; border: 3px solid #bfdbfe; border-top-color: #0ea5e9; border-radius: 50%; animation: spin .7s linear infinite; vertical-align: middle; margin-right: 8px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Result */
+    #result { display: none; margin-top: 28px; }
+    .result-ok { background: #f0fdf4; border: 2px solid #22c55e; border-radius: 10px; padding: 24px; }
+    .result-ok h2 { color: #15803d; font-size: 1.1rem; margin-bottom: 12px; }
+    .key-box { background: #fff; border: 2px dashed #22c55e; border-radius: 8px; padding: 16px; text-align: center; margin: 16px 0; }
+    .key-box code { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; color: #0369a1; word-break: break-all; }
+    .copy-btn { margin-top: 10px; background: #e0f2fe; border: none; border-radius: 6px; padding: 6px 16px; font-size: 0.85rem; color: #0369a1; cursor: pointer; font-weight: 600; }
+    .copy-btn:hover { background: #bae6fd; }
+    .email-note { font-size: 0.85rem; color: #64748b; margin-top: 10px; }
+    .result-err { background: #fef2f2; border: 2px solid #f87171; border-radius: 10px; padding: 20px; }
+    .result-err h2 { color: #dc2626; font-size: 1rem; margin-bottom: 8px; }
+    .result-err p { font-size: 0.9rem; color: #7f1d1d; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">AI Health <span>Suite</span></a>
+  <div class="lang">
+    <button onclick="setLang('en')" class="on">EN</button>
+    <button onclick="setLang('el')">ΕΛ</button>
+  </div>
+</nav>
+
+<main>
+  <h1 data-el="Ενεργοποίηση Άδειας" data-en="Activate Your License">Activate Your License</h1>
+  <p class="subtitle" data-el="Εισάγετε το κλειδί Gumroad και το Machine ID σας για να λάβετε το κλειδί ενεργοποίησης."
+     data-en="Enter your Gumroad license key and Machine ID to receive your activation key.">
+    Enter your Gumroad license key and Machine ID to receive your activation key.
+  </p>
+
+  <div class="steps">
+    <h3 data-el="Πώς να βρείτε το Machine ID σας" data-en="How to find your Machine ID">How to find your Machine ID</h3>
+    <ol>
+      <li data-el="Ανοίξτε το AI Health Suite στον υπολογιστή σας" data-en="Open AI Health Suite on your computer">Open AI Health Suite on your computer</li>
+      <li data-el="Πηγαίνετε στις Ρυθμίσεις (⚙)" data-en="Go to Settings (⚙)">Go to Settings (⚙)</li>
+      <li data-el="Κλικ στην καρτέλα «Άδεια»" data-en="Click the «License» tab">Click the «License» tab</li>
+      <li data-el="Αντιγράψτε το Machine ID (μορφή: AIHS-XXXX-XXXX-XXXX-XXXX)" data-en="Copy the Machine ID (format: AIHS-XXXX-XXXX-XXXX-XXXX)">Copy the Machine ID (format: AIHS-XXXX-XXXX-XXXX-XXXX)</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <form id="activateForm" onsubmit="submitActivation(event)">
+      <label for="gumroadKey" data-el="Κλειδί Gumroad" data-en="Gumroad License Key">Gumroad License Key</label>
+      <input type="text" id="gumroadKey" name="gumroadKey" autocomplete="off" spellcheck="false"
+             data-en-ph="XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX"
+             data-el-ph="XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX"
+             placeholder="XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX" required />
+      <p class="hint" data-el="Από το email επιβεβαίωσης αγοράς Gumroad" data-en="From your Gumroad purchase confirmation email">From your Gumroad purchase confirmation email</p>
+
+      <label for="machineId" data-el="Machine ID" data-en="Machine ID">Machine ID</label>
+      <input type="text" id="machineId" name="machineId" autocomplete="off" spellcheck="false"
+             data-en-ph="AIHS-XXXX-XXXX-XXXX-XXXX"
+             data-el-ph="AIHS-XXXX-XXXX-XXXX-XXXX"
+             placeholder="AIHS-XXXX-XXXX-XXXX-XXXX" required />
+      <p class="hint" data-el="Από το AI Health Suite → Ρυθμίσεις → Άδεια" data-en="From AI Health Suite → Settings → License">From AI Health Suite → Settings → License</p>
+
+      <button type="submit" id="submitBtn" data-el="Ενεργοποίηση" data-en="Activate">Activate</button>
+    </form>
+
+    <div id="spinner">
+      <span class="spin"></span>
+      <span data-el="Επαλήθευση..." data-en="Verifying...">Verifying...</span>
+    </div>
+
+    <div id="result"></div>
+  </div>
+</main>
+
+<script>
+let L = localStorage.getItem('lang') || 'en';
+
+function setLang(l) {
+  L = l;
+  localStorage.setItem('lang', l);
+  document.querySelectorAll('.lang button').forEach(b => b.classList.remove('on'));
+  document.querySelector(`.lang button[onclick="setLang('${l}')"]`).classList.add('on');
+  document.documentElement.lang = l === 'el' ? 'el' : 'en';
+  document.querySelectorAll('[data-el]').forEach(e => {
+    const val = e.getAttribute('data-' + l);
+    if (!val) return;
+    if (e.tagName === 'INPUT' || e.tagName === 'TEXTAREA') return;
+    e.innerHTML = val;
+  });
+  document.querySelectorAll('[data-el-ph]').forEach(e => {
+    e.placeholder = e.getAttribute('data-' + l + '-ph') || '';
+  });
+  document.title = l === 'el' ? 'Ενεργοποίηση Άδειας — AI Health Suite' : 'Activate License — AI Health Suite';
+}
+
+setLang(L);
+
+const ERROR_MSGS = {
+  invalid_license_key: {
+    en: 'The Gumroad license key was not found or is invalid. Please check and try again.',
+    el: 'Το κλειδί Gumroad δεν βρέθηκε ή είναι άκυρο. Ελέγξτε και δοκιμάστε ξανά.'
+  },
+  invalid_machine_id: {
+    en: 'The Machine ID format is invalid. It should look like AIHS-XXXX-XXXX-XXXX-XXXX.',
+    el: 'Η μορφή του Machine ID είναι λανθασμένη. Πρέπει να έχει τη μορφή AIHS-XXXX-XXXX-XXXX-XXXX.'
+  },
+  license_refunded: {
+    en: 'This license has been refunded and cannot be activated.',
+    el: 'Αυτή η άδεια έχει επιστραφεί και δεν μπορεί να ενεργοποιηθεί.'
+  },
+  missing_gumroad_key: {
+    en: 'Please enter your Gumroad license key.',
+    el: 'Εισάγετε το κλειδί Gumroad.'
+  },
+  missing_machine_id: {
+    en: 'Please enter your Machine ID.',
+    el: 'Εισάγετε το Machine ID.'
+  },
+  server_misconfigured: {
+    en: 'Server configuration error. Please contact support.',
+    el: 'Σφάλμα διαμόρφωσης διακομιστή. Επικοινωνήστε με την υποστήριξη.'
+  },
+  network_error: {
+    en: 'Network error. Please check your connection and try again.',
+    el: 'Σφάλμα δικτύου. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.'
+  },
+  default: {
+    en: 'An unexpected error occurred. Please try again or contact support.',
+    el: 'Προέκυψε απρόσμενο σφάλμα. Δοκιμάστε ξανά ή επικοινωνήστε με την υποστήριξη.'
+  }
+};
+
+async function submitActivation(e) {
+  e.preventDefault();
+
+  const gumroadKey = document.getElementById('gumroadKey').value.trim();
+  const machineId = document.getElementById('machineId').value.trim();
+  const btn = document.getElementById('submitBtn');
+  const spinner = document.getElementById('spinner');
+  const resultDiv = document.getElementById('result');
+
+  btn.disabled = true;
+  spinner.style.display = 'block';
+  resultDiv.style.display = 'none';
+  resultDiv.innerHTML = '';
+
+  try {
+    const resp = await fetch('/.netlify/functions/activate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ gumroadKey, machineId }),
+    });
+
+    const data = await resp.json();
+
+    spinner.style.display = 'none';
+
+    if (data.ok && data.licenseKey) {
+      const emailLine = data.emailSent && data.email
+        ? `<p class="email-note">${L === 'el'
+            ? `Το κλειδί εστάλη επίσης στο email σας: <strong>${data.email}</strong>`
+            : `The key was also sent to your email: <strong>${data.email}</strong>`}</p>`
+        : '';
+
+      resultDiv.innerHTML = `
+        <div class="result-ok">
+          <h2>${L === 'el' ? '✓ Η άδεια ενεργοποιήθηκε επιτυχώς!' : '✓ License activated successfully!'}</h2>
+          <p>${L === 'el' ? 'Το κλειδί σας είναι:' : 'Your license key is:'}</p>
+          <div class="key-box">
+            <code id="keyCode">${data.licenseKey}</code><br>
+            <button class="copy-btn" onclick="copyKey()">${L === 'el' ? 'Αντιγραφή' : 'Copy'}</button>
+          </div>
+          ${emailLine}
+          <p style="font-size:0.85rem;color:#64748b;margin-top:12px;">
+            ${L === 'el'
+              ? 'Άνοιξε το AI Health Suite → Ρυθμίσεις → Άδεια → επικόλλησε το κλειδί.'
+              : 'Open AI Health Suite → Settings → License → paste the key.'}
+          </p>
+        </div>`;
+    } else {
+      const errKey = data.error || 'default';
+      const msgs = ERROR_MSGS[errKey] || ERROR_MSGS.default;
+      resultDiv.innerHTML = `
+        <div class="result-err">
+          <h2>${L === 'el' ? 'Σφάλμα ενεργοποίησης' : 'Activation failed'}</h2>
+          <p>${msgs[L] || msgs.en}</p>
+        </div>`;
+    }
+  } catch (err) {
+    spinner.style.display = 'none';
+    const msgs = ERROR_MSGS.network_error;
+    resultDiv.innerHTML = `
+      <div class="result-err">
+        <h2>${L === 'el' ? 'Σφάλμα σύνδεσης' : 'Connection error'}</h2>
+        <p>${msgs[L] || msgs.en}</p>
+      </div>`;
+  }
+
+  resultDiv.style.display = 'block';
+  btn.disabled = false;
+}
+
+function copyKey() {
+  const key = document.getElementById('keyCode')?.textContent;
+  if (!key) return;
+  navigator.clipboard.writeText(key).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    if (btn) {
+      const orig = btn.textContent;
+      btn.textContent = L === 'el' ? 'Αντιγράφηκε!' : 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    }
+  });
+}
+</script>
+
+</body>
+</html>
