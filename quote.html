@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ζητήστε Προσφορά — AI Health Suite</title>
+    <title>Request a Quote — AI Health Suite</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
@@ -20,6 +20,9 @@
         .nav-links{display:flex;gap:24px;align-items:center}
         .nav-links a{color:#555;font-size:.88rem;font-weight:500}
         .nav-links a:hover{color:#2980b9}
+        .lang{display:flex;background:#f0f0f0;border-radius:20px;overflow:hidden}
+        .lang button{border:none;background:none;padding:5px 12px;font-size:.78rem;font-weight:600;cursor:pointer;color:#999;transition:.2s}
+        .lang button.on{background:#2980b9;color:#fff;border-radius:20px}
 
         /* HERO */
         .quote-hero{text-align:center;padding:80px 0 40px}
@@ -78,11 +81,15 @@
     <div class="container nav-inner">
         <a href="index.html" class="logo">AI <b>Health</b> Suite</a>
         <div class="nav-links">
-            <a href="index.html">Αρχική</a>
-            <a href="index.html#programs">Προγράμματα</a>
-            <a href="quote.html">Ζητήστε Προσφορά</a>
-            <a href="eula.html">Άδεια Χρήσης</a>
-            <a href="mailto:kouskourasd@gmail.com">Επικοινωνία</a>
+            <a href="index.html" data-el="Αρχική" data-en="Home">Home</a>
+            <a href="index.html#programs" data-el="Προγράμματα" data-en="Programs">Programs</a>
+            <a href="quote.html" data-el="Ζητήστε Προσφορά" data-en="Request Quote">Request Quote</a>
+            <a href="eula.html" data-el="Άδεια Χρήσης" data-en="License">License</a>
+            <a href="mailto:kouskourasd@gmail.com" data-el="Επικοινωνία" data-en="Contact">Contact</a>
+            <div class="lang">
+                <button onclick="setLang('el')">EL</button>
+                <button class="on" onclick="setLang('en')">EN</button>
+            </div>
         </div>
     </div>
 </nav>
@@ -90,117 +97,117 @@
 <!-- HERO -->
 <section class="quote-hero">
     <div class="container">
-        <h1>Ζητήστε Προσφορά</h1>
-        <p>Πείτε μας τις ανάγκες σας και θα σας απαντήσουμε με προσαρμοσμένη προσφορά εντός 24 ωρών.</p>
-        <p class="sub">30 ημέρες δωρεάν δοκιμασία — Χωρίς πιστωτική κάρτα</p>
+        <h1 data-el="Ζητήστε Προσφορά" data-en="Request a Quote">Request a Quote</h1>
+        <p data-el="Πείτε μας τις ανάγκες σας και θα σας απαντήσουμε με προσαρμοσμένη προσφορά εντός 24 ωρών." data-en="Tell us your needs and we will respond with a customized quote within 24 hours.">Tell us your needs and we will respond with a customized quote within 24 hours.</p>
+        <p class="sub" data-el="30 ημέρες δωρεάν δοκιμασία — Χωρίς πιστωτική κάρτα" data-en="30-day free trial — No credit card required">30-day free trial — No credit card required</p>
     </div>
 </section>
 
 <!-- FORM -->
 <section class="container">
     <div class="form-card">
-        <h2>Φόρμα Αιτήματος</h2>
-        <p class="desc">Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας άμεσα.</p>
+        <h2 data-el="Φόρμα Αιτήματος" data-en="Request Form">Request Form</h2>
+        <p class="desc" data-el="Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας άμεσα." data-en="Fill in your details and we will contact you promptly.">Fill in your details and we will contact you promptly.</p>
 
         <form action="mailto:kouskourasd@gmail.com" method="post" enctype="text/plain">
             <div class="form-grid">
                 <div class="form-group">
-                    <label>Όνομα *</label>
-                    <input type="text" name="name" required placeholder="Το όνομά σας">
+                    <label data-el="Όνομα *" data-en="First Name *">First Name *</label>
+                    <input type="text" name="name" required data-el-ph="Το όνομά σας" data-en-ph="Your first name" placeholder="Your first name">
                 </div>
                 <div class="form-group">
-                    <label>Επώνυμο *</label>
-                    <input type="text" name="surname" required placeholder="Το επώνυμό σας">
+                    <label data-el="Επώνυμο *" data-en="Last Name *">Last Name *</label>
+                    <input type="text" name="surname" required data-el-ph="Το επώνυμό σας" data-en-ph="Your last name" placeholder="Your last name">
                 </div>
             </div>
 
             <div class="form-grid">
                 <div class="form-group">
-                    <label>Email *</label>
+                    <label data-el="Email *" data-en="Email *">Email *</label>
                     <input type="email" name="email" required placeholder="email@example.com">
                 </div>
                 <div class="form-group">
-                    <label>Τηλέφωνο</label>
+                    <label data-el="Τηλέφωνο" data-en="Phone">Phone</label>
                     <input type="tel" name="phone" placeholder="+30 ...">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Ειδικότητα</label>
+                    <label data-el="Ειδικότητα" data-en="Specialty">Specialty</label>
                     <select name="specialty">
-                        <option value="">Επιλέξτε ειδικότητα...</option>
-                        <option>Οφθαλμιατρική</option>
-                        <option>Καρδιολογία</option>
-                        <option>Παιδιατρική</option>
-                        <option>Ορθοπεδική</option>
-                        <option>Γενική Ιατρική</option>
-                        <option>Δερματολογία</option>
-                        <option>Ωτορινολαρυγγολογία</option>
-                        <option>Νευρολογία</option>
-                        <option>Ψυχιατρική</option>
-                        <option>Ουρολογία</option>
-                        <option>Μαιευτική & Γυναικολογία</option>
-                        <option>Γαστρεντερολογία</option>
-                        <option>Πνευμονολογία</option>
-                        <option>Ενδοκρινολογία</option>
-                        <option>Ρευματολογία</option>
-                        <option>Αιματολογία</option>
-                        <option>Νεφρολογία</option>
-                        <option>Φυσικοθεραπεία</option>
-                        <option>Άλλη</option>
+                        <option value="" data-el="Επιλέξτε ειδικότητα..." data-en="Select specialty...">Select specialty...</option>
+                        <option data-el="Οφθαλμιατρική" data-en="Ophthalmology">Ophthalmology</option>
+                        <option data-el="Καρδιολογία" data-en="Cardiology">Cardiology</option>
+                        <option data-el="Παιδιατρική" data-en="Pediatrics">Pediatrics</option>
+                        <option data-el="Ορθοπεδική" data-en="Orthopedics">Orthopedics</option>
+                        <option data-el="Γενική Ιατρική" data-en="General Practice">General Practice</option>
+                        <option data-el="Δερματολογία" data-en="Dermatology">Dermatology</option>
+                        <option data-el="Ωτορινολαρυγγολογία" data-en="ENT">ENT</option>
+                        <option data-el="Νευρολογία" data-en="Neurology">Neurology</option>
+                        <option data-el="Ψυχιατρική" data-en="Psychiatry">Psychiatry</option>
+                        <option data-el="Ουρολογία" data-en="Urology">Urology</option>
+                        <option data-el="Μαιευτική & Γυναικολογία" data-en="OB/GYN">OB/GYN</option>
+                        <option data-el="Γαστρεντερολογία" data-en="Gastroenterology">Gastroenterology</option>
+                        <option data-el="Πνευμονολογία" data-en="Pulmonology">Pulmonology</option>
+                        <option data-el="Ενδοκρινολογία" data-en="Endocrinology">Endocrinology</option>
+                        <option data-el="Ρευματολογία" data-en="Rheumatology">Rheumatology</option>
+                        <option data-el="Αιματολογία" data-en="Hematology">Hematology</option>
+                        <option data-el="Νεφρολογία" data-en="Nephrology">Nephrology</option>
+                        <option data-el="Φυσικοθεραπεία" data-en="Physiotherapy">Physiotherapy</option>
+                        <option data-el="Άλλη" data-en="Other">Other</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Τύπος Οργανισμού</label>
+                    <label data-el="Τύπος Οργανισμού" data-en="Organization Type">Organization Type</label>
                     <select name="type">
-                        <option value="">Επιλέξτε...</option>
-                        <option>Ιατρείο - Μονός Ιατρός</option>
-                        <option>Ιατρείο - Πολλαπλοί Ιατροί</option>
-                        <option>Κλινική</option>
-                        <option>Νοσοκομείο</option>
-                        <option>Εταιρεία</option>
+                        <option value="" data-el="Επιλέξτε..." data-en="Select...">Select...</option>
+                        <option data-el="Ιατρείο - Μονός Ιατρός" data-en="Practice - Single Doctor">Practice - Single Doctor</option>
+                        <option data-el="Ιατρείο - Πολλαπλοί Ιατροί" data-en="Practice - Multiple Doctors">Practice - Multiple Doctors</option>
+                        <option data-el="Κλινική" data-en="Clinic">Clinic</option>
+                        <option data-el="Νοσοκομείο" data-en="Hospital">Hospital</option>
+                        <option data-el="Εταιρεία" data-en="Company">Company</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Αριθμός Χρηστών</label>
+                    <label data-el="Αριθμός Χρηστών" data-en="Number of Users">Number of Users</label>
                     <select name="users">
-                        <option value="">Επιλέξτε...</option>
-                        <option>1 χρήστης</option>
-                        <option>2-5 χρήστες</option>
-                        <option>6-15 χρήστες</option>
-                        <option>16+ χρήστες</option>
+                        <option value="" data-el="Επιλέξτε..." data-en="Select...">Select...</option>
+                        <option data-el="1 χρήστης" data-en="1 user">1 user</option>
+                        <option data-el="2-5 χρήστες" data-en="2-5 users">2-5 users</option>
+                        <option data-el="6-15 χρήστες" data-en="6-15 users">6-15 users</option>
+                        <option data-el="16+ χρήστες" data-en="16+ users">16+ users</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Πρόγραμμα Ενδιαφέροντος</label>
+                    <label data-el="Πρόγραμμα Ενδιαφέροντος" data-en="Pricing Plan Interest">Pricing Plan Interest</label>
                     <select name="program">
-                        <option value="">Επιλέξτε...</option>
-                        <option>Μηνιαία Συνδρομή</option>
-                        <option>Ετήσια Συνδρομή</option>
-                        <option>Μόνιμη Άδεια (Εφάπαξ)</option>
-                        <option>Δεν γνωρίζω — θέλω καθοδήγηση</option>
+                        <option value="" data-el="Επιλέξτε..." data-en="Select...">Select...</option>
+                        <option data-el="Μηνιαία Συνδρομή" data-en="Monthly Subscription">Monthly Subscription</option>
+                        <option data-el="Ετήσια Συνδρομή" data-en="Annual Subscription">Annual Subscription</option>
+                        <option data-el="Μόνιμη Άδεια (Εφάπαξ)" data-en="Perpetual License (One-time)">Perpetual License (One-time)</option>
+                        <option data-el="Δεν γνωρίζω — θέλω καθοδήγηση" data-en="Not sure — I need guidance">Not sure — I need guidance</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Μήνυμα</label>
-                    <textarea name="message" placeholder="Περιγράψτε τις ανάγκες σας, ερωτήσεις ή οτιδήποτε θέλετε να μας γνωστοποιήσετε..."></textarea>
+                    <label data-el="Μήνυμα" data-en="Message">Message</label>
+                    <textarea name="message" data-el-ph="Περιγράψτε τις ανάγκες σας, ερωτήσεις ή οτιδήποτε θέλετε να μας γνωστοποιήσετε..." data-en-ph="Describe your needs, questions or anything you'd like to share with us..." placeholder="Describe your needs, questions or anything you'd like to share with us..."></textarea>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Αποστολή Αιτήματος</button>
+            <button type="submit" class="submit-btn" data-el="Αποστολή Αιτήματος" data-en="Submit Request">Submit Request</button>
         </form>
     </div>
 </section>
@@ -210,18 +217,18 @@
     <div class="info-grid">
         <div class="info-box">
             <div class="ic">&#128231;</div>
-            <h3>Γρήγορη Απάντηση</h3>
-            <p>Απαντάμε σε όλα τα αιτήματα εντός 24 ωρών.</p>
+            <h3 data-el="Γρήγορη Απάντηση" data-en="Quick Response">Quick Response</h3>
+            <p data-el="Απαντάμε σε όλα τα αιτήματα εντός 24 ωρών." data-en="We respond to all requests within 24 hours.">We respond to all requests within 24 hours.</p>
         </div>
         <div class="info-box">
             <div class="ic">&#128274;</div>
-            <h3>Δωρεάν Δοκιμασία</h3>
-            <p>30 ημέρες πλήρους λειτουργικότητας — χωρίς κόστος.</p>
+            <h3 data-el="Δωρεάν Δοκιμασία" data-en="Free Trial">Free Trial</h3>
+            <p data-el="30 ημέρες πλήρους λειτουργικότητας — χωρίς κόστος." data-en="30 days of full functionality — no cost.">30 days of full functionality — no cost.</p>
         </div>
         <div class="info-box">
             <div class="ic">&#127760;</div>
-            <h3>Παγκόσμια Διαθεσιμότητα</h3>
-            <p>Λογισμικό διαθέσιμο παγκοσμίως, στα ελληνικά και στα αγγλικά.</p>
+            <h3 data-el="Παγκόσμια Διαθεσιμότητα" data-en="Global Availability">Global Availability</h3>
+            <p data-el="Λογισμικό διαθέσιμο παγκοσμίως σε 11 γλώσσες." data-en="Software available worldwide in 11 languages.">Software available worldwide in 11 languages.</p>
         </div>
     </div>
 </section>
@@ -231,5 +238,31 @@
     <div class="container">&copy; 2026 AI Health Suite — Dimitrios Kouskouras. All rights reserved.</div>
 </footer>
 
+<script>
+let L = localStorage.getItem('lang') || 'en';
+function setLang(l) {
+    L = l;
+    localStorage.setItem('lang', l);
+    document.querySelectorAll('.lang button').forEach(b => b.classList.remove('on'));
+    document.querySelector(`.lang button[onclick="setLang('${l}')"]`).classList.add('on');
+    document.documentElement.lang = l === 'el' ? 'el' : 'en';
+    document.querySelectorAll('[data-el]').forEach(e => {
+        const val = e.getAttribute('data-' + l);
+        if (!val) return;
+        if (e.tagName === 'INPUT' || e.tagName === 'TEXTAREA') {
+            // handled separately
+        } else {
+            e.innerHTML = val;
+        }
+    });
+    document.querySelectorAll('[data-el-ph]').forEach(e => {
+        e.placeholder = e.getAttribute('data-' + l + '-ph') || '';
+    });
+    document.title = l === 'el'
+        ? 'Ζητήστε Προσφορά — AI Health Suite'
+        : 'Request a Quote — AI Health Suite';
+}
+setLang(L);
+</script>
 </body>
 </html>

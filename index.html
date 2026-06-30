@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Health Suite — Ιατρικά Λογισμικά</title>
+    <title>AI Health Suite — Medical Software</title>
     <meta name="description" content="AI Health Suite — Εξειδικευμένα λογισμικά διαχείρισης ιατρικών πρακτικών με AI Agent. 18 ειδικότητες, 600+ νοσήματα ICD-10, 293+ φάρμακα.">
     <link rel="canonical" href="https://aihealthsuite.org/">
     <meta property="og:title" content="AI Health Suite — Ιατρικά Λογισμικά Νέας Γενιάς">
@@ -257,8 +257,8 @@
             <a href="#custom" data-el="Προσαρμογή" data-en="Custom">Προσαρμογή</a>
             <a href="#contact" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
             <div class="lang">
-                <button class="on" onclick="setLang('el')">EL</button>
-                <button onclick="setLang('en')">EN</button>
+                <button onclick="setLang('el')">EL</button>
+                <button class="on" onclick="setLang('en')">EN</button>
             </div>
         </div>
         <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -281,6 +281,7 @@
             <div><div class="n">18</div><div class="l" data-el="Ειδικότητες" data-en="Specialties">Ειδικότητες</div></div>
             <div><div class="n">ICD-10</div><div class="l" data-el="Κωδικοί" data-en="Codes">Κωδικοί</div></div>
             <div><div class="n">AI v2.0</div><div class="l" data-el="Agent" data-en="Agent">Agent</div></div>
+            <div><div class="n">11</div><div class="l" data-el="Γλώσσες" data-en="Languages">Languages</div></div>
 
         </div>
     </div>
@@ -327,7 +328,8 @@
             <div class="feat"><div class="fi">&#128196;</div><h3 data-el="ICD-10" data-en="ICD-10">ICD-10</h3><p data-el="Εξειδικευμένοι κωδικοί ICD-10 ανά ειδικότητα, αυτόματη μετανάστευση." data-en="Specialized ICD-10 codes per specialty, auto-migration.">Εξειδικευμένοι κωδικοί ICD-10 ανά ειδικότητα, αυτόματη μετανάστευση.</p></div>
             <div class="feat"><div class="fi">&#128197;</div><h3 data-el="Ραντεβού & Ροή" data-en="Appointments & Flow">Ραντεβού & Ροή</h3><p data-el="Διαχείριση ραντεβού, παρακολούθηση ροής ασθενών, ημερήσια σύνοψη." data-en="Appointments, patient flow tracking, daily summary.">Διαχείριση ραντεβού, παρακολούθηση ροής ασθενών, ημερήσια σύνοψη.</p></div>
             <div class="feat"><div class="fi">&#128274;</div><h3 data-el="Δοκιμασία & Άδεια" data-en="Trial & License">Δοκιμασία & Άδεια</h3><p data-el="30 ημέρες δωρεάν. Κλειδί ενεργοποίησης SHA256." data-en="30-day free trial. SHA256 license key activation.">30 ημέρες δωρεάν. Κλειδί ενεργοποίησης SHA256.</p></div>
-            <div class="feat"><div class="fi">&#128194;</div><h3 data-el="Συνημμένα" data-en="Attachments">Συνημμένα</h3><p data-el="Οποιοσδήποτε τύπος αρχείου — επισύναψη, προβολή, email, διαγραφή." data-en="Any file type — attach, view, email, delete.">Οποιοσδήποτε τύπος αρχείου — επισύναψη, προβολή, email, διαγραφή.</p></div>
+            <div class="feat"><div class="fi">&#128194;</div><h3 data-el="Συνημμένα" data-en="Attachments">Attachments</h3><p data-el="Οποιοσδήποτε τύπος αρχείου — επισύναψη, προβολή, email, διαγραφή." data-en="Any file type — attach, view, email, delete.">Any file type — attach, view, email, delete.</p></div>
+            <div class="feat"><div class="fi">&#127760;</div><h3 data-el="11 Γλώσσες" data-en="11 Languages">11 Languages</h3><p data-el="Ελληνικά · Αγγλικά · Γερμανικά · Ισπανικά · Γαλλικά · Ιταλικά · Ρωσικά · Σουηδικά · Νορβηγικά · Κινεζικά · Ιαπωνικά" data-en="Greek · English · German · Spanish · French · Italian · Russian · Swedish · Norwegian · Chinese · Japanese">Greek · English · German · Spanish · French · Italian · Russian · Swedish · Norwegian · Chinese · Japanese</p></div>
         </div>
     </div>
 </section>
@@ -475,14 +477,17 @@
 
 <script>
 // Language
-let L='el';
+let L=localStorage.getItem('lang')||'en';
 function setLang(l){
     L=l;
+    localStorage.setItem('lang',l);
     document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('on'));
     document.querySelector(`.lang button[onclick="setLang('${l}')"]`).classList.add('on');
     document.documentElement.lang=l==='el'?'el':'en';
-    document.querySelectorAll('[data-el]').forEach(e=>e.textContent=e.getAttribute('data-'+l));
+    document.querySelectorAll('[data-el]').forEach(e=>e.innerHTML=e.getAttribute('data-'+l));
+    document.title=l==='el'?'AI Health Suite — Ιατρικά Λογισμικά':'AI Health Suite — Medical Software';
 }
+setLang(L);
 // Nav scroll
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60));
 // Active link
