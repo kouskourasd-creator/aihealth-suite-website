@@ -88,8 +88,6 @@
         .hero h1 em,.hero h2 em{font-style:normal;background:linear-gradient(135deg,#74b9ff,#00cec9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
         .hero h2{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:16px;letter-spacing:-.01em}
         .hero p{color:rgba(255,255,255,.65);font-size:clamp(.95rem,1.8vw,1.15rem);max-width:560px;margin:0 auto 32px}
-        .hero-cross{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:8px 20px;margin:0 0 28px;font-size:.82rem;color:rgba(255,255,255,.65)}
-        .hero-cross-icons{font-size:1rem;letter-spacing:3px}
         .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
         .btn{display:inline-flex;align-items:center;gap:6px;padding:12px 28px;border-radius:40px;font-weight:600;font-size:.92rem;border:none;cursor:pointer;transition:.3s}
         .btn-p{background:#2980b9;color:#fff}
@@ -201,8 +199,8 @@
         .dl-plat .dp-badge{display:inline-block;font-size:.66rem;padding:2px 8px;border-radius:12px;margin-bottom:10px;font-weight:600}
         .dl-plat .dp-badge-new{background:rgba(0,184,148,.2);color:#00b894;border:1px solid rgba(0,184,148,.3)}
         .dl-plat .dp-badge-soon{background:rgba(253,203,110,.15);color:#fdcb6e;border:1px solid rgba(253,203,110,.25)}
-        .dl-ios-steps{color:rgba(255,255,255,.55);font-size:.74rem;line-height:1.5;margin-top:6px}
-        .dl-ios-note{color:rgba(253,203,110,.75);font-size:.7rem;line-height:1.4;margin-top:8px;font-style:italic}
+        .dl-steps{color:rgba(255,255,255,.55);font-size:.74rem;line-height:1.5;margin-top:6px}
+        .dl-note{color:rgba(253,203,110,.75);font-size:.7rem;line-height:1.4;margin-top:8px;font-style:italic}
         .dpb{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;padding:9px 10px;border-radius:30px;font-weight:700;font-size:.8rem;text-decoration:none;transition:.2s;margin-top:6px;border:none;cursor:pointer}
         .dpb-win{background:linear-gradient(135deg,#0078d4,#106ebe);color:#fff}
         .dpb-win:hover{box-shadow:0 4px 14px rgba(0,120,212,.4)}
@@ -277,10 +275,6 @@
         <h1 data-el="AI Health Suite" data-en="AI Health Suite">AI Health Suite</h1>
         <h2><em data-el="Ιατρικά Λογισμικά Νέας Γενιάς" data-en="Next-Gen Medical Software">Ιατρικά Λογισμικά Νέας Γενιάς</em></h2>
         <p data-el="Εξειδικευμένα προγράμματα για κάθε ιατρική ειδικότητα. Με ενσωματωμένο AI Agent v2.0, υποστήριξη δικτύου και πλήρη διαχείριση ασθενών." data-en="Specialized programs for every medical specialty. With integrated AI Agent v2.0, network support and complete patient management.">Εξειδικευμένα προγράμματα για κάθε ιατρική ειδικότητα. Με ενσωματωμένο AI Agent v2.0, υποστήριξη δικτύου και πλήρη διαχείριση ασθενών.</p>
-        <div class="hero-cross">
-            <span class="hero-cross-icons">🪟🖥️📱🤖</span>
-            <span data-el="Μία εφαρμογή για Windows, Mac, Android &amp; iOS — πάντα συγχρονισμένη στο δίκτυό σας" data-en="One app for Windows, Mac, Android &amp; iOS — always in sync across your network">One app for Windows, Mac, Android &amp; iOS — always in sync across your network</span>
-        </div>
         <div class="hero-btns">
             <a href="#download" class="btn btn-dl" data-el="&#128229; Λήψη Δωρεάν" data-en="&#128229; Free Download">&#128229; Λήψη Δωρεάν</a>
             <a href="https://kouskouras.gumroad.com/l/aihs-kouskouras" class="btn btn-buy" target="_blank" rel="noopener" data-el="&#128722; Αγορά" data-en="&#128722; Buy Now">&#128722; Buy Now</a>
@@ -388,6 +382,7 @@
                         <div class="dp-badge dp-badge-new">10/11 &middot; x64</div>
                         <a class="dpb dpb-win" href="https://github.com/kouskourasd-creator/ai-health-suite-releases/releases/download/v1.3.4/AI.Health.Suite.Setup.1.3.4.exe" data-el="&#8659; Λήψη" data-en="&#8659; Download">&#8659; Λήψη</a>
                         <a class="dpb dpb-sec" href="https://github.com/kouskourasd-creator/ai-health-suite-releases/releases/download/v1.0.0/AI.Health.Suite.1.0.0.exe" data-el="&#8635; Παλαιά Έκδοση" data-en="&#8635; Old Version">&#8635; Παλαιά Έκδοση</a>
+                        <p class="dl-note" data-el="Ίσως δείτε «Το Windows προστάτεψε τον υπολογιστή σας» — πατήστε «Περισσότερες πληροφορίες» → «Εκτέλεση ούτως ή άλλως»." data-en="You may see &ldquo;Windows protected your PC&rdquo; — click &ldquo;More info&rdquo; → &ldquo;Run anyway&rdquo;.">You may see &ldquo;Windows protected your PC&rdquo; — click &ldquo;More info&rdquo; → &ldquo;Run anyway&rdquo;.</p>
                     </div>
                     <!-- macOS -->
                     <div class="dl-plat">
@@ -395,14 +390,15 @@
                         <h4>macOS</h4>
                         <div class="dp-badge dp-badge-new">NEW &middot; Universal</div>
                         <a class="dpb dpb-mac" href="https://github.com/kouskourasd-creator/ai-health-suite-releases/releases/download/v1.3.4/AI.Health.Suite-1.3.4-universal.dmg" data-el="&#8659; Λήψη DMG" data-en="&#8659; Download DMG">&#8659; Λήψη DMG</a>
+                        <p class="dl-note" data-el="Ίσως δείτε ότι η εφαρμογή είναι από μη αναγνωρισμένο προγραμματιστή — δεξί κλικ στην εφαρμογή → «Άνοιγμα»." data-en="You may see a warning that the app is from an unidentified developer — right-click the app → &ldquo;Open&rdquo;.">You may see a warning that the app is from an unidentified developer — right-click the app → &ldquo;Open&rdquo;.</p>
                     </div>
                     <!-- iOS -->
                     <div class="dl-plat">
                         <div class="dpi">📱</div>
                         <h4>iOS</h4>
                         <div class="dp-badge dp-badge-soon" data-el="Preview &middot; Standalone" data-en="Preview &middot; Standalone">Preview &middot; Standalone</div>
-                        <p class="dl-ios-steps" data-el="Ανοίξτε αυτή τη σελίδα σε Safari, πατήστε 📤 και «Προσθήκη στην Αρχική Οθόνη»" data-en="Open this page in Safari, tap 📤 then &ldquo;Add to Home Screen&rdquo;">Open this page in Safari, tap 📤 then &ldquo;Add to Home Screen&rdquo;</p>
-                        <p class="dl-ios-note" data-el="Λειτουργεί αυτόνομα σε ένα iPhone/iPad. Το LAN sync με άλλες συσκευές έρχεται σύντομα." data-en="Works standalone on one iPhone/iPad. LAN sync with other devices is coming soon.">Works standalone on one iPhone/iPad. LAN sync with other devices is coming soon.</p>
+                        <p class="dl-steps" data-el="Ανοίξτε αυτή τη σελίδα σε Safari, πατήστε 📤 και «Προσθήκη στην Αρχική Οθόνη»" data-en="Open this page in Safari, tap 📤 then &ldquo;Add to Home Screen&rdquo;">Open this page in Safari, tap 📤 then &ldquo;Add to Home Screen&rdquo;</p>
+                        <p class="dl-note" data-el="Λειτουργεί αυτόνομα σε ένα iPhone/iPad. Το LAN sync με άλλες συσκευές έρχεται σύντομα." data-en="Works standalone on one iPhone/iPad. LAN sync with other devices is coming soon.">Works standalone on one iPhone/iPad. LAN sync with other devices is coming soon.</p>
                     </div>
                     <!-- Android -->
                     <div class="dl-plat">
